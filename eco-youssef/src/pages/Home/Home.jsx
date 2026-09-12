@@ -33,14 +33,14 @@ export default function Home() {
         <div className="bg-gray-50 min-h-screen text-right" dir="rtl">
 
             {/* 1. Hero Section - الواجهة الرئيسية */}
-            <section className="bg-gradient-to-r from-orange-600 to-amber-500 text-white py-16 px-4">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <section className="bg-gradient-to-r from-orange-600 to-amber-500 px-4 py-12 text-white sm:py-16">
+                <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">
 
-                    <div className="md:w-1/2 space-y-4">
+                    <div className="w-full space-y-4 md:w-1/2">
                         <span className="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                             التوصيل لجميع المدن المغربية 🚚
                         </span>
-                        <h1 className="text-4xl md:text-5xl font-black leading-tight">
+                        <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
                             أفضل المنتجات وأجودها بأسعار مناسبة
                         </h1>
                         <p className="text-orange-100 text-base leading-relaxed">
@@ -56,11 +56,11 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="md:w-1/2 flex justify-center">
+                    <div className="w-full md:w-1/2">
                         <img
                             src="https://via.placeholder.com/500x350/ffffff/333333?text=Special+Offer"
                             alt="Hero Banner"
-                            className="rounded-2xl shadow-2xl border-4 border-white/20"
+                            className="mx-auto w-full max-w-xl rounded-2xl border-4 border-white/20 object-cover shadow-2xl"
                         />
                     </div>
 
@@ -100,9 +100,9 @@ export default function Home() {
 
             {/* 3. Featured Products - المنتجات الأكثر مبيعاً */}
             <section className="py-12 max-w-7xl mx-auto px-4">
-                <div className="flex justify-between items-center mb-8">
+                <div className="mb-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                        <h2 className="text-2xl font-black text-gray-900">المنتجات الأكثر مبيعاً 🔥</h2>
+                        <h2 className="text-xl font-black text-gray-900 sm:text-2xl">المنتجات الأكثر مبيعاً 🔥</h2>
                         <p className="text-sm text-gray-500">اخترنا لك أفضل العروض المتاحة حالياً</p>
                     </div>
                     <Link to="/products" className="text-orange-600 font-bold hover:underline text-sm">

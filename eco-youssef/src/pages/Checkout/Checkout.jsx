@@ -23,7 +23,7 @@ export default function Checkout() {
     };
 
     return (
-        <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md my-8" dir="rtl">
+        <div className="mx-3 my-6 max-w-2xl rounded-lg bg-white p-4 shadow-md sm:mx-auto sm:my-8 sm:p-6" dir="rtl">
             <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
                 إتمام الطلب - الدفع عند الاستلام 🚚
             </h2>

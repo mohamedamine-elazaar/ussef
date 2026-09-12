@@ -60,7 +60,7 @@ export default function Products() {
 
                 {/* عنوان الصفحة */}
                 <div className="mb-8 text-center">
-                    <h1 className="text-3xl font-black text-gray-900 mb-2">جميع المنتجات</h1>
+                    <h1 className="mb-2 text-2xl font-black text-gray-900 sm:text-3xl">جميع المنتجات</h1>
                     <p className="text-gray-600 text-sm">اختر من بين أفضل المنتجات المتاحة للتوصيل السريع والدفع عند الاستلام</p>
                 </div>
 
@@ -79,14 +79,14 @@ export default function Products() {
                     </div>
 
                     {/* أزرار التصنيف */}
-                    <div className="flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+                    <div className="flex w-full gap-2 overflow-x-auto pb-2 md:w-auto md:pb-0">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
                                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition ${selectedCategory === cat
-                                        ? "bg-orange-600 text-white"
-                                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                                    ? "bg-orange-600 text-white"
+                                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                                     }`}
                             >
                                 {cat}

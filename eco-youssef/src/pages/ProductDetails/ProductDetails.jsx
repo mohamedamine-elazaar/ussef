@@ -21,14 +21,14 @@ export default function ProductDetails() {
 
     return (
         <div className="min-h-screen bg-gray-50 py-10 text-right" dir="rtl">
-            <div className="mx-auto max-w-5xl rounded-2xl border bg-white p-6 shadow-sm md:p-8">
+            <div className="mx-3 rounded-2xl border bg-white p-4 shadow-sm sm:mx-auto sm:max-w-5xl sm:p-6 md:p-8">
                 <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-                    <img src={product.image} alt={product.title} className="h-80 w-full rounded-xl border object-cover" />
+                    <img src={product.image} alt={product.title} className="h-56 w-full rounded-xl border object-cover sm:h-72 md:h-80" />
                     <div className="space-y-4">
                         <span className="rounded-full bg-orange-100 px-3 py-1 text-xs font-bold text-orange-600">{product.category}</span>
                         <h1 className="text-2xl font-black text-gray-900 md:text-3xl">{product.title}</h1>
                         <p className="text-sm leading-relaxed text-gray-600">{product.description}</p>
-                        <div className="flex items-center gap-3"><span className="text-3xl font-black text-green-600">{product.price} د.م</span><span className="text-lg text-gray-400 line-through">{product.originalPrice} د.م</span></div>
+                        <div className="flex flex-wrap items-center gap-3"><span className="text-2xl font-black text-green-600 sm:text-3xl">{product.price} د.م</span><span className="text-lg text-gray-400 line-through">{product.originalPrice} د.م</span></div>
                         <div className="flex items-center gap-4 py-2"><span className="text-sm font-bold text-gray-700">الكمية:</span><div className="flex items-center overflow-hidden rounded-lg border"><button type="button" onClick={() => setQuantity((value) => Math.max(1, value - 1))} className="bg-gray-100 px-3 py-1 font-bold">-</button><span className="px-4 font-bold">{quantity}</span><button type="button" onClick={() => setQuantity((value) => value + 1)} className="bg-gray-100 px-3 py-1 font-bold">+</button></div></div>
                         <button type="button" onClick={handleAddToCart} className="w-full rounded-xl bg-orange-500 py-3.5 font-bold text-white shadow-lg hover:bg-orange-600">أضف إلى السلة</button>
                     </div>
