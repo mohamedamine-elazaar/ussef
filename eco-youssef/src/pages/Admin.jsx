@@ -4,6 +4,11 @@ import { useProducts } from "../Context/ProductContext";
 export default function Admin() {
     const { products, addProduct, deleteProduct } = useProducts();
 
+    const handleLogout = () => {
+        localStorage.removeItem("isAdmin");
+        window.location.href = "/login";
+    };
+
     const [formData, setFormData] = useState({
         title: "",
         price: "",
@@ -45,7 +50,16 @@ export default function Admin() {
     return (
         <div className="bg-gray-50 min-h-screen py-10 text-right" dir="rtl">
             <div className="max-w-6xl mx-auto px-4">
-                <h1 className="text-3xl font-black text-gray-900 mb-8">لوحة تحكم الأدمن 🛠️</h1>
+                <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+                    <h1 className="text-3xl font-black text-gray-900">لوحة تحكم الأدمن 🛠️</h1>
+                    <button
+                        type="button"
+                        onClick={handleLogout}
+                        className="rounded-xl bg-gray-200 px-4 py-2 text-sm font-bold text-gray-800 transition hover:bg-gray-300"
+                    >
+                        تسجيل الخروج 🚪
+                    </button>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
